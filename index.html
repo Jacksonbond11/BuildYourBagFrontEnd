@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build Your Bag - Disc Golf</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="index.html"><h2>Build Your Bag</h2></a>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="login">
+          <button id="signIn">Login</button>
+          <button id="signUp">Sign up</button>
+        </div>
+
+        <div class="dropdown-container">
+          <button id="profile"></button>
+          <div id="profileModal" class="profileModal">
+            <div class="profile-modal-content">
+              <button id="logout">Logout</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="landing-content">
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Email</p>
+            <input id="loginEmail" />
+            <p>Password</p>
+            <input id="loginPassword" type="password" />
+            <button id="loginSubmitButton">Login</button>
+            <br />
+            <p>Don't have an account yet?</p>
+            <button id="signUp2">Create Free Account</button>
+          </div>
+        </div>
+
+        <div id="signUpModal" class="modal">
+          <div class="modal-content">
+            <p>Create Your Free Account</p>
+            <p></p>
+            <span class="close">&times;</span>
+            <p>Username</p>
+            <input id="usernameInput" name="username" />
+            <p>Email:</p>
+            <input id="emailInput" name="email" type="email" />
+            <p>Password</p>
+            <input id="passwordInput" type="password" />
+            <button id="signUpSubmit">Create Account</button>
+          </div>
+        </div>
+
+        <div class="hero">
+          <img src="../img/hero_bag.png" alt="Hero Image" />
+          <div class="hero-text">
+            <h2>The Ultimate Disc Golf Bag Builder</h2>
+            <p>
+              Unleash your disc golf potential with a customized bag. Discover
+              the perfect combination of discs that synergize and elevate your
+              game. Tailor your selection to match your unique style and needs.
+              Elevate your play and create unforgettable disc golf moments.
+            </p>
+            <button id="start-building">Start Building</button>
+          </div>
+        </div>
+        <img src="https://infinitediscs.com/Discmania-DD1#gallery" />
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Build Your Bag</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="landing.js" type="module"></script>
+  </body>
+</html>

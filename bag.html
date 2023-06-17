@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build Your Bag - Disc Golf</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="index.html"><h2>Build Your Bag</h2></a>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="dropdown-container">
+          <button id="profile"></button>
+          <div id="profileModal" class="profileModal">
+            <div class="profile-modal-content">
+              <button id="logout">Logout</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="profileModal" class="modal">
+        <button id="logout">Logout</button>
+      </div>
+      <div class="container">
+        <div id="disc-container">
+          <h1>Disc Data</h1>
+          <div id="disc-data"><p>Select a disc to show data...</p></div>
+        </div>
+        <div id="searchAndStats-container">
+          <div id="search-container">
+            <h1>Add a Disc</h1>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search for a disc"
+              autocomplete="off"
+            />
+            <div id="suggestions"></div>
+            <button id="add-to-bag">Add to Bag</button>
+          </div>
+          <div id="stats-container">
+            <h1>Stats</h1>
+            <p>Count of Discs by Category</p>
+            <div id="stats"></div>
+            <p>Average Speed by Category</p>
+            <div id="stats_AVGSpeed"></div>
+          </div>
+        </div>
+
+        <div id="bag-container">
+          <h2>Your Bag</h2>
+          <ul id="bag">
+            <p>Your bag is empty...</p>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Build Your Bag</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../bag.js" type="module"></script>
+  </body>
+</html>

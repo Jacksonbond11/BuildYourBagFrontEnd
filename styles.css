@@ -1,0 +1,567 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+  color: #e5e5e5; /* This changes the text color to a light grey */
+}
+header {
+  background-color: #0a7b38;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 10px;
+}
+
+#logo a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+#navbar ul li {
+  margin-right: 10px;
+}
+
+#navbar a {
+  color: white;
+  background-color: #0a7b38; /* This changes the button background to a dark green */
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#navbar a:hover {
+  background-color: #064c26;
+}
+#navbar #login {
+  margin-left: 10px;
+}
+
+#signIn,
+#signUp {
+  margin-left: 5px;
+}
+
+#landing-content {
+  text-align: center;
+  max-width: 100%; /* Control the width of the content area */
+}
+
+button {
+  color: white;
+  background-color: #0a7b38; /* This changes the button background to a dark green */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #064c26; /* This changes the button hover background to a darker green */
+}
+
+button#start-building {
+  color: white;
+  background-color: #0a7b38; /* This changes the button background to a dark green */
+  border: none;
+  padding: 20px 40px; /* Increased padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px; /* Increased font-size */
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+  border-radius: 5px; /* Added border-radius */
+}
+
+button#start-building:hover {
+  background-color: #064c26; /* This changes the button hover background to a darker green */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Enhances 3D effect on hover */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Adjust this value based on the desired height of your hero image */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: calc(100vh - 100px);
+  object-fit: cover;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+}
+
+.hero-text {
+  position: absolute;
+  height: 20vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* This adds a semi-transparent black background to the text */
+  padding: 20px; /* Add some padding so the text isn't right up against the edge of the background */
+  border-radius: 10px; /* Optional: add some border radius to round the corners of the background */
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  background-color: #0a7b38; /* This changes the footer background to a dark green */
+  color: white;
+  text-align: center;
+  padding: 0px;
+  position: fixed; /* Changes from relative to fixed */
+  bottom: 0; /* This keeps the footer at the bottom */
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+.container {
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+#disc-container {
+  padding: 1%;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+}
+
+#disc-image {
+  width: 70%;
+}
+
+#searchAndStats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#bag-container {
+  width: 20%;
+  margin-right: 10%;
+}
+
+#search {
+  flex-shrink: 0;
+  width: 300px; /* Adjust the width as per your needs */
+  padding: 10px;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+  color: #e5e5e5;
+  background: #1b1b1b;
+  outline: none;
+}
+
+#suggestions {
+  position: relative;
+  width: 310px; /* Adjust the width as per your needs */
+  background-color: #1b1b1b;
+  color: #e5e5e5;
+  border: 1px solid #0a7b38;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 100;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#suggestions p {
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#suggestions p:hover {
+  background-color: #0a7b38;
+}
+
+#bag {
+  list-style-type: none;
+  padding: 2%;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+}
+
+.bag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 2%;
+  transition: background 0.3s;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+}
+
+.bag-item span {
+  margin-right: 20px;
+}
+
+.bag-item button {
+  margin-left: 10%;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+.bag-item:hover {
+  background-color: #0a7b38;
+}
+
+.bag-item button:hover {
+  background-color: red;
+  color: black;
+}
+
+#stats {
+  list-style: none;
+  padding: 2%;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+}
+#stats_AVGSpeed {
+  list-style: none;
+  padding: 2%;
+  border: 1px solid #0a7b38;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #0a7b38;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 40px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+  display: grid; /* Change to grid display */
+  grid-template-columns: 1fr 1fr; /* Divide the content into two equal columns */
+  gap: 1px; /* Add some gap between the columns */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  position: relative;
+}
+
+.modal-content p {
+  display: flex; /* Change to flex display */
+  align-items: center; /* Center the text vertically */
+  margin: 0; /* Remove the default margin */
+}
+
+.modal-content input {
+  width: 80%; /* Set the input width to 100% */
+}
+.modal-content button {
+  text-align: left;
+  position: relative;
+  background-color: #0a753a;
+}
+
+.modal-content button:hover {
+  background-color: #0a582d;
+}
+
+/* The Close Button */
+.close {
+  position: absolute; /* Add this line */
+  top: 10px; /* Adjust the value to position the X span vertically */
+  right: 10px; /* Adjust the value to position the X span horizontally */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative; /* or 'inline-flex' if you need flex properties */
+  right: 0;
+}
+
+.profileModal {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: auto; /* consider specifying a max-width */
+  z-index: 1;
+  background-color: #096930;
+}
+
+.profile-modal-content {
+  right: 0;
+  padding: 1px;
+  border: 1px solid #888;
+}
+
+#logout {
+  background-color: #096930;
+}
+
+#logout:hover {
+  background-color: #0b7a37;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust this value based on the desired height of your hero image */
+    overflow: hidden;
+  }
+
+  .hero img {
+    width: 1000%;
+    height: calc(100vh - 100px);
+    object-fit: cover;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-text {
+    position: absolute;
+    height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* This adds a semi-transparent black background to the text */
+    padding: 20px; /* Add some padding so the text isn't right up against the edge of the background */
+    border-radius: 10px; /* Optional: add some border radius to round the corners of the background */
+  }
+
+  .hero::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  #bag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #modal-content {
+    width: 90%;
+  }
+
+  .container {
+    margin: 1%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  #disc-container {
+    padding: 2%;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    height: 50%;
+    margin-bottom: 100px;
+    margin-top: 5%;
+  }
+
+  #searchAndStats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  #stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #search {
+    flex-shrink: 0;
+    width: 96%; /* Adjust the width as per your needs */
+    padding: 10px;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    color: #e5e5e5;
+    background: #1b1b1b;
+    outline: none;
+  }
+
+  #suggestions {
+    position: relative;
+    width: 100%; /* Adjust the width as per your needs */
+    background-color: #1b1b1b;
+    color: #e5e5e5;
+    border: 1px solid #0a7b38;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 100;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  #suggestions p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #suggestions p:hover {
+    background-color: #0a7b38;
+  }
+
+  #bag {
+    list-style-type: none;
+    padding: 2%;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    width: 95%;
+  }
+
+  .bag-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 2%;
+    transition: background 0.3s;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    width: 95%;
+  }
+
+  .bag-item span {
+    margin-right: 20px;
+  }
+
+  .bag-item button {
+    margin-left: 10%;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  .bag-item:hover {
+    background-color: #0a7b38;
+  }
+
+  .bag-item button:hover {
+    background-color: red;
+    color: black;
+  }
+
+  #stats {
+    list-style: none;
+    padding: 2%;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    width: 95%;
+  }
+  #stats_AVGSpeed {
+    list-style: none;
+    padding: 2%;
+    border: 1px solid #0a7b38;
+    border-radius: 5px;
+    width: 95%;
+  }
+  #disc-data {
+    height: 40%;
+  }
+}
